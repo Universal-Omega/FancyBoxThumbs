@@ -1,0 +1,46 @@
+{
+	"name": "FancyBoxThumbs",
+	"version": "2.2",
+	"author": [
+		"Universal Omega",
+		"Jason Gill"
+	],
+	"url": "https://www.mediawiki.org/wiki/Extension:FancyBoxThumbs",
+	"description": "Displays thumbnailed images in a Mac-style \"lightbox\" that floats overtop of web page. A simple and fancy lightbox alternative",
+	"license-name": "GPL-2.0-or-later",
+	"type": "media",
+	"requires": {
+		"MediaWiki": ">= 1.35.0"
+	},
+	"AutoloadClasses": {
+		"FancyBoxThumbsHooks": "FancyBoxThumbsHooks.php"
+	},
+	"ResourceModules": {
+		"ext.FancyBoxThumbs": {
+			"targets": [
+				"mobile",
+				"desktop"
+			],
+			"scripts": [
+				"fancyBox/source/jquery.fancybox.js",
+				"ext.FancyBoxThumbs.js"
+			],
+			"styles": [
+				"fancyBox/source/jquery.fancybox.css"
+			]
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "modules",
+		"remoteExtPath": "FancyBoxThumbs/modules"
+	},
+	"config": {
+		"FancyBoxThumbsOptions": {
+			"value": "{}"
+		}
+	},
+	"Hooks": {
+		"BeforePageDisplay": "FancyBoxThumbsHooks::onBeforePageDisplay"
+	},
+	"manifest_version": 2
+}
