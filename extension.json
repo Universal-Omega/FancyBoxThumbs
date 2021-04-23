@@ -7,7 +7,6 @@
 	],
 	"url": "https://www.mediawiki.org/wiki/Extension:FancyBoxThumbs",
 	"description": "Displays thumbnailed images in a Mac-style \"lightbox\" that floats overtop of web page. A simple and fancy lightbox alternative",
-	"license-name": "GPL-2.0-or-later",
 	"type": "media",
 	"requires": {
 		"MediaWiki": ">= 1.35.0"
