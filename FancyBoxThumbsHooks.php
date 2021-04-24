@@ -1,3 +1,5 @@
+<?php
+
 class FancyBoxThumbsHooks {
 	/**
 	 * @param OutputPage $out
