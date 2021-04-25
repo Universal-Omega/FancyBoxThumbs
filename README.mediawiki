@@ -2,8 +2,6 @@
 
 The '''FancyBoxThumbs''' extension displays thumbnailed images in a Mac-style "lightbox" that floats overtop of web page. This can create a more user friendly environment, where the user doesn't leave the page every time they click a thumbnail.
 
-[http://gilluminate.com/mediawiki/index.php?title=Main_Page Example]
-
 == Version 2.0 ==
 
 * Version 2 was completely re-written. 
@@ -21,16 +19,18 @@ You are free to use fancyBox for your personal or non-profit website projects.
 You can get the author's permission to use fancyBox for commercial websites by [http://fancyapps.com/store/ paying a fee].
 
 == Installation ==
-# [https://github.com/gilluminate/FancyBoxThumbs/archive/master.zip Download the .zip file]
+# [https://github.com/Universal-Omega/FancyBoxThumbs/archive/master.zip Download the .zip file]
 # Extract the files to your <code>extensions</code> directory
-# Rename <code>gilluminate-FancyBoxThumbs-xxxxxx</code> to <code>FancyBoxThumbs</code>
-# Add to the end of [http://www.mediawiki.org/wiki/Manual:LocalSettings.php LocalSettings.php]: <pre>require_once("$IP/extensions/FancyBoxThumbs/FancyBoxThumbs.php");</pre>
+# Rename <code>FancyBoxThumbs-master</code> to <code>FancyBoxThumbs</code>
+# Add to the end of [http://www.mediawiki.org/wiki/Manual:LocalSettings.php LocalSettings.php]: <pre>wfLoadExtension( 'FancyBoxThumbs' );</pre>
 # Installation can now be verified through <code>Special:Version</code> page on your wiki
 
 == Options ==
-You can set [http://fancyapps.com/fancybox/#docs fancyBox options] by setting a <code>$fbtFancyBoxOptions</code> variable in [http://www.mediawiki.org/wiki/Manual:LocalSettings.php LocalSettings.php] ''after'' setting the <code>require_once</code> above.
+You can set [http://fancyapps.com/fancybox/#docs fancyBox options] by setting a <code>$wgFancyBoxThumbsOptions</code> variable in [http://www.mediawiki.org/wiki/Manual:LocalSettings.php LocalSettings.php] ''after'' setting the <code>wfLoadExtension</code> above.
 
 For example:
 
-<pre>require_once("$IP/extensions/FancyBoxThumbs/FancyBoxThumbs.php");
-$fbtFancyBoxOptions = '{"openEffect":"elastic","closeEffect":"elastic","helpers":{"title":{"type":"inside"}}}';</pre>
+<pre>
+wfLoadExtension( 'FancyBoxThumbs' );
+$wgFancyBoxThumbsOptions = '{ "openEffect": "elastic", "closeEffect": "elastic", "helpers": { "title": { "type": "inside" } } }';</pre>
+</pre>
