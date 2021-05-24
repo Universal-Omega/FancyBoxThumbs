@@ -42,8 +42,8 @@
           .addClass('fancybox');
     });
 
-    //now set fancybox on all thumbnail links
-    //fbtFancyBoxOptions is set in LocalSettings.php
-    //example {closeBtn:false}
-    $("a.fancybox").fancybox(fbtFancyBoxOptions);
+    // now set fancybox on all thumbnail links
+    // wgFancyBoxThumbsOptions is set in LocalSettings.php
+    // example {closeBtn:false}
+    $("a.fancybox").fancybox(wgFancyBoxThumbsOptions);
 }( jQuery ) );
